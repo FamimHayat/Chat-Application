@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@utility container{
+  margin: 0 auto;
+}
+
+@theme{
+  --color- : #;
+  --color- : #;
+  --color- : #;
+  --color- : #;
+  
+  --font- :  ;
+  --font- :  ;
+}
