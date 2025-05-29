@@ -5,11 +5,11 @@
 }
 
 @theme{
-  --color- : #;
-  --color- : #;
-  --color- : #;
-  --color- : #;
-  
-  --font- :  ;
-  --font- :  ;
+  --color-primaryColor : #191818;
+  --color-secondColor : #0b0b0b;
+  --color-brandColor : #f1ecec;
+   
+  --font-headerFont : "Magra", sans-serif; 
+  --font-regularFont : "Afacad", sans-serif;
 }
+
