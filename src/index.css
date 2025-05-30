@@ -7,7 +7,7 @@
 @theme{
   --color-primary: #222831;
   --color-secondary: #41464d;
-  --color-base: #9c8e78;
+  --color-base: #c6b291;
   --color-brand: #dfd0b8;
   --color-text: #eae4d5;
    
@@ -15,10 +15,14 @@
   --font-regularFont : "PT Sans", sans-serif;
 }
 
+a{
+  display: inline-block ;
+}
+
 .input-css{
   font-size: 25px;
   font-weight: 600;
-  background-color: white;
+  background-color:  white;
 color: black;
   border: 3px solid black;
 }
