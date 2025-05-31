@@ -2,10 +2,10 @@ import React from 'react'
 
 const ChatList = () => {
   return (
-    <div>
-      fdsf
-    </div>
-  )
+    <>
+      <section className="bg-primary h-screen w-full"></section>
+    </>
+  );
 }
 
 export default ChatList
