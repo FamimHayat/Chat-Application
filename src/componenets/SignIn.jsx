@@ -7,7 +7,7 @@ const SignIn = () => {
       <>
         <section className="h-dvh bg-primary flex justify-center items-center">
           <div className=" relative py-3 bg-secondColor sm:max-w-xl sm:mx-auto ">
-            <div className="relative signIn-shadow px-4 py-10 bg-secondary border-6 shadow-2xl border-primary outline-4 outline-brand mx-8 md:mx-0  rounded-3xl sm:p-10 ">
+            <div className="relative signIn-shadow px-4 py-10 bg-primary border-6 shadow-2xl border-primary outline-4 outline-brand mx-8 md:mx-0  rounded-3xl sm:p-10 ">
               <div className="max-w-md mx-auto">
                 <div className="flex items-center space-x-5 justify-center">
                   <div>

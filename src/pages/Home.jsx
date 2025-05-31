@@ -6,8 +6,8 @@ import ChatBox from '../componenets/ChatBox'
 const Home = () => {
   return (
   
-      <div className=''>
-        <ChatList />
+      <div className='bg-primary w-full'>
+        <ChatList  />
         <ChatBox/>
       </div>
    

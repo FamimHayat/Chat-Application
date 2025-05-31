@@ -1,35 +1,42 @@
 @import "tailwindcss";
 
-@utility container{
+@utility container {
   margin: 0 auto;
 }
 
-@theme{
+@theme {
   --color-primary: #222831;
   --color-secondary: #41464d;
   --color-base: #c6b291;
   --color-brand: #dfd0b8;
   --color-text: #eae4d5;
-   
-  --font-headerFont : "Cal Sans", sans-serif;
-  --font-regularFont : "PT Sans", sans-serif;
+
+  --font-headerFont: "Cal Sans", sans-serif;
+  --font-regularFont: "PT Sans", sans-serif;
 }
 
-a{
-  display: inline-block ;
+a {
+  display: inline-block;
 }
 
-.input-css{
+.input-css {
   font-size: 25px;
   font-weight: 600;
-  background-color:  white;
-color: black;
+  background-color: white;
+  color: black;
   border: 3px solid black;
 }
 
-.input-shadow{
+.input-shadow {
   box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
 }
-.signIn-shadow{
+
+.signIn-shadow {
   box-shadow: #9c8e78 0px 2px 4px 0px, #dfd0b8 0px 2px 16px 0px;
 }
+
+.chat-search:hover{
+  box-shadow: #9c8e78 0px 2px 4px 0px, #dfd0b8 0px 2px 16px 0px;
+}
+
+
