@@ -18,155 +18,125 @@ const ChatList = () => {
         </div>
         <div className="grid grid-cols-1 gap-4  py-2 my-3 overflow-y-scroll">
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (1).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (2).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (3).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (4).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (5).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (6).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (7).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (8).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (9).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (10).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (11).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (12).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (13).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (14).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (15).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (16).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
           <Users
-            userImage={"/my-image.jpg"}
+            userImage={"/user-image (17).jpg"}
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
+            timeStamp={"pm"}
           />
-          <Users
-            userImage={"/my-image.jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
-            lastTime={"10.07 "}
-          />
-          <Users
-            userImage={"/my-image.jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
-            lastTime={"10.07 "}
-          />
-          <Users
-            userImage={"/my-image.jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
-            lastTime={"10.07 "}
-          />
-          <Users
-            userImage={"/my-image.jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
-            lastTime={"10.07 "}
-          />
-          <Users
-            userImage={"/my-image.jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
-            lastTime={"10.07 "}
-          />
-          <Users
-            userImage={"/my-image.jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
-            lastTime={"10.07 "}
-          />
-          <Users
-            userImage={"/my-image.jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
-            lastTime={"10.07 "}
-          />
-          <Users
-            userImage={"/my-image.jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
-            lastTime={"10.07 "}
-          />
+         
         </div>
       </section>
     </>
