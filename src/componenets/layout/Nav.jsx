@@ -17,9 +17,9 @@ const Nav = () => {
             <GiImperialCrown className="text-[25px] text-base" />
           </div>
 
-          <h2 className="text-[35px] font-semibold font-headerFont text-brand underline">
+          <h1 className="text-[35px] font-semibold font-headerFont text-brand underline">
             royal chat
-          </h2>
+          </h1>
         </div>
         <ul className="w-full mt-50 ">
           <li className="w-full">

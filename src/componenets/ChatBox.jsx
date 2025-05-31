@@ -2,9 +2,9 @@ import React from 'react'
 
 const ChatBox = () => {
   return (
-    <div>
-      
-    </div>
+    <section className=''>
+      <div></div>
+    </section>
   )
 }
 

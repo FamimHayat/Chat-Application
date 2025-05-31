@@ -5,12 +5,11 @@ import ChatBox from '../componenets/ChatBox'
 
 const Home = () => {
   return (
-  
-      <div className='bg-primary w-full'>
-        <ChatList  />
-        <ChatBox/>
-      </div>
-   
+    <div className=" flex bg-primary w-full">
+      <ChatList />
+      {/* <h2>select a chat</h2> */}
+      <ChatBox />
+    </div>
   );
 }
 

@@ -5,7 +5,7 @@ import { FaSearch } from "react-icons/fa";
 const ChatList = () => {
   return (
     <>
-      <section className="h-dvh flex flex-col  bg-primary  max-w-2xl border-r-2 border-r-brand rounded-xl">
+      <section className="h-dvh  flex flex-col w-xl  bg-primary  border-r-2 border-r-brand rounded-xl">
         <div className="flex border-b-2 border-b-brand rounded-2xl p-3 gap-3">
           <input
             type="text"
@@ -22,121 +22,120 @@ const ChatList = () => {
             userName={"bou"}
             lastMassage={"i love you jaan"}
             lastTime={"10.07 "}
-            timeStamp={"pm"}
+            timeStamp={"am"}
           />
           <Users
             userImage={"/user-image (2).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"side chick"}
+            lastMassage={"babu khaisaw..?"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (3).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"best friend"}
+            lastMassage={"koi asos..?"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (4).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"normal friend"}
+            lastMassage={"kire mama"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (5).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"teacher"}
+            lastMassage={"dont forget your assignment"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (6).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"bou 3"}
+            lastMassage={"i love you baby"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (7).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"team leader"}
+            lastMassage={"progress status...?"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (8).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"class mate"}
+            lastMassage={"free tonight..?"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (9).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"bou 4"}
+            lastMassage={"when you gonna come home.."}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (10).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"side chick 2"}
+            lastMassage={"baby dinner outside"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (11).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"office wife..?"}
+            lastMassage={"where are the report papers.?"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (12).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"friend"}
+            lastMassage={"hi, free tonight..?"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (13).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"sister in law"}
+            lastMassage={"eid shopping er jonno taka lagbe.."}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (14).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"client"}
+            lastMassage={"project ready..?"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (15).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
-            lastTime={"10.07 "}
+            userName={"pervert friend"}
+            lastMassage={"party tonight..?"}
+            lastTime={"10.00"}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (16).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"co-worker"}
+            lastMassage={"where are the reports sir"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
           <Users
             userImage={"/user-image (17).jpg"}
-            userName={"bou"}
-            lastMassage={"i love you jaan"}
+            userName={"little brother"}
+            lastMassage={"my tution fees..?"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
-         
         </div>
       </section>
     </>
