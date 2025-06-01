@@ -4,7 +4,7 @@ import { Outlet } from 'react-router'
 
 const Layout = () => {
   return (
-    <div className='flex'>
+    <div className='flex flex-col xl:flex-row'>
           <Nav />
           <Outlet/>
     </div>
