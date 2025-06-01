@@ -13,7 +13,7 @@ const Users = ({ userImage, userName, lastMassage, lastTime, timeStamp }) => {
             <h2 className="text-[22px] text-text font-headerFont group-hover:text-primary">
               {userName}
             </h2>
-            <p className="text-[18px] underline text-brand font-regularFont  group-hover:text-primary">
+            <p className="w-4xs text-sm underline text-brand font-regularFont  group-hover:text-primary lg:text-lg">
               {lastMassage}
             </p>
           </div>
