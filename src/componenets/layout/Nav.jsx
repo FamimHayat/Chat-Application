@@ -6,8 +6,7 @@ import { HiUserGroup } from "react-icons/hi";
 import { PiDotsThreeCircleFill } from "react-icons/pi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
-import { Link } from "react-router"
-
+import { Link } from "react-router";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +25,7 @@ const Nav = () => {
         </div>
         <button
           onClick={toggleMenu}
-          className="text-brand text-3xl"
+          className="text-brand text-3xl cursor-pointer"
           aria-label="Toggle navigation menu"
           aria-expanded={isOpen}
         >
@@ -51,7 +50,7 @@ const Nav = () => {
         </div>
 
         {/* Menu Items */}
-        <ul className="flex flex-col items-center w-full mt-12">
+        <ul className="flex flex-col pt-20  items-center w-full mt-auto xl:pt-0">
           <li className="w-full">
             <Link
               to="/chat"
@@ -63,23 +62,23 @@ const Nav = () => {
               </div>
             </Link>
           </li>
-          <li>
+          <li className="w-full">
             <Link
               to="/groups"
               className="block w-full px-5 py-2 my-2 cursor-pointer hover:underline text-brand hover:text-text hover:bg-secondary"
             >
-              <div className="flex  items-center gap-2">
+              <div className="flex justify-center items-center gap-2">
                 <HiUserGroup className="text-[20px]" />
                 <p className="text-[24px] font-semibold">Group</p>
               </div>
             </Link>
           </li>
-          <li>
+          <li className="w-full">
             <Link
               to="/people"
               className="block w-full px-5 py-2 my-2 cursor-pointer hover:underline text-brand hover:text-text hover:bg-secondary"
             >
-              <div className="flex items-center gap-2">
+              <div className="flex justify-center items-center gap-2">
                 <PiDotsThreeCircleFill className="text-[20px]" />
                 <p className="text-[24px] font-semibold">People</p>
               </div>
@@ -105,7 +104,7 @@ const Nav = () => {
         </div>
 
         {/* User Info */}
-        <div className="flex justify-center mt-auto mb-10 px-2 pb-6 gap-2 items-center xl:mb-0">
+        <div className="flex justify-center mt-auto mb-10 px-2 pb-6 gap-2 items-center xl:mb-0 xl:border-0">
           <div className="w-16 overflow-hidden rounded-full">
             <img src="/my-image.jpg" alt="User avatar of famim yash" />
           </div>
