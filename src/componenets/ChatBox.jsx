@@ -37,7 +37,7 @@ const ChatBox = () => {
             </p>
             {/* sender-massage */}
             <p className="ml-auto max-w-md pl-7 py-2 pr-2 shadow-2xl font-regularFont rounded-md rounded-bl-3xl text-[18px] text-primary bg-brand  ">
-              Lorem ipsum dolor sit amet consectetur.
+             Lorem, ipsum dolor.
             </p>
 
             {/* receiver massage */}

@@ -132,7 +132,7 @@ const ChatList = () => {
           <Users
             userImage={"/user-image (17).jpg"}
             userName={"little brother"}
-            lastMassage={"my tution fees..?"}
+            lastMassage={"when you gonna pay my tution fees ..?"}
             lastTime={"10.07 "}
             timeStamp={"pm"}
           />
