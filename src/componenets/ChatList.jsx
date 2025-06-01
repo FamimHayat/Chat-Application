@@ -5,7 +5,7 @@ import { FaSearch } from "react-icons/fa";
 const ChatList = () => {
   return (
     <>
-      <section className="h-dvh  flex flex-col w-xl  bg-primary  border-r-2 border-r-brand rounded-xl">
+      <section className="h-dvh w-4xl flex flex-col  bg-primary  border-r-2 border-r-brand rounded-xl">
         <div className="flex border-b-2 border-b-brand rounded-2xl p-3 gap-3">
           <input
             type="text"

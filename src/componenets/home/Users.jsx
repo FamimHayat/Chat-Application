@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 const Users = ({ userImage, userName, lastMassage, lastTime, timeStamp }) => {
   return (
-    <Link to="/" className="w-full py-2 px-3 hover:bg-base group">
+    <Link to="/" className=" py-2 px-3 hover:bg-base group">
       <div className="flex justify-between items-end">
         <div className="flex gap-8  justify-between">
           <div className="w-15 rounded-full overflow-hidden border-3 border-primary outline-2 outline-base">
