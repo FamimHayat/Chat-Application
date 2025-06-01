@@ -39,4 +39,7 @@ a {
   box-shadow: #9c8e78 0px 2px 4px 0px, #dfd0b8 0px 2px 16px 0px;
 }
 
+.input-massage-shadow{
+  box-shadow: #dfd0b8 0px 0px 10px 0px;
+}
 
