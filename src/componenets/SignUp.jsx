@@ -6,7 +6,7 @@ const SignUp = () => {
   return (
     <>
       <section className="h-dvh bg-primary flex justify-center items-center ">
-        <div className=" relative py-3 bg-secondColor sm:max-w-xl sm:mx-auto scale-[0.85] ">
+        <div className=" relative py-3 bg-secondColor sm:max-w-xl sm:mx-auto sm:scale-[0.85] scale-[.70]">
           <div className="relative signIn-shadow px-4 py-10 bg-primary border-6 shadow-2xl border-primary outline-4 outline-brand mx-8 md:mx-0  rounded-3xl sm:p-10 ">
             <div className="max-w-md mx-auto">
               <div className="flex items-center space-x-5 justify-center">
@@ -24,24 +24,24 @@ const SignUp = () => {
                   <input
                     type="text"
                     placeholder="first name"
-                    className=" placeholder:text-white text-[20px]  p-3 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
+                    className=" placeholder:text-stone-300  text-[20px]  p-3 pl-5 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
                   />
                   <input
                     type="text"
                     placeholder="last name"
-                    className=" placeholder:text-white text-[20px]  p-3 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
+                    className=" placeholder:text-stone-300  text-[20px]  p-3 pl-5 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
                   />
                 </div>
 
                 <input
                   type="email"
                   placeholder="email"
-                  className=" placeholder:text-white text-[20px]  p-3 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
+                  className=" placeholder:text-stone-300  text-[20px]  p-3 pl-5 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
                 />
                 <input
                   type="password"
                   placeholder="password"
-                  className="placeholder:text-white text-[20px]  p-3 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
+                  className="placeholder:text-stone-300 text-[20px]  p-3 pl-5 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
                 />
               </div>
               <div className="text-right mb-4">

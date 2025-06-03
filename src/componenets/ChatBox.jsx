@@ -1,8 +1,6 @@
 import React from "react";
 import {
-  FaArrowAltCircleLeft,
-  FaArrowAltCircleRight,
-  FaArrowLeft,
+
   FaArrowRight,
   FaSmile,
 } from "react-icons/fa";
