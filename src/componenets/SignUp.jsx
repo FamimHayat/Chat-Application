@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   updateProfile,
-  sendEmailVerification
+  sendEmailVerification,
 } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
   const [userData, setUserData] = useState({
     fullName: "",
     email: "",
@@ -25,14 +27,15 @@ const SignUp = () => {
           photoURL: "https://example.com/jane-q-user/profile.jpg",
         })
           .then(() => {
-          console.log(userData);
-          
-            toast.success("registration successful, please verify your email account ");
-            
+            console.log(userData);
+            sendEmailVerification(auth.currentUser).then(() => {
+              toast.success(
+                "registration successful, please verify your email account "
+              );
+              navigate(/"")
+            });
           })
-          .catch((error) => {
-           
-          });
+          .catch((error) => {});
       })
       .catch((error) => {
         console.log(error.code);
