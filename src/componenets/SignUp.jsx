@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
 
 const SignUp = () => {
@@ -14,11 +18,34 @@ const SignUp = () => {
 
   const handleSignUp = () => {
     createUserWithEmailAndPassword(auth, userData.email, userData.password)
-      .then((userCredential) => {})
+      .then((userCredential) => {
+        updateProfile(auth.currentUser, {
+          displayName: userData.fullName,
+          photoURL: "https://example.com/jane-q-user/profile.jpg",
+        })
+        .then(() => {
+            toast.success("registration successful, please verify your email account ");
+            
+          })
+          .catch((error) => {
+           
+          });
+      })
       .catch((error) => {
-     
-        
-        toast.error(error.code);
+        console.log(error.code);
+        console.log(error.message);
+
+        if (error.code === "auth/invalid-email") {
+          toast.error("empty input fields");
+        }
+
+        if (error.code === "auth/missing-password") {
+          toast.error("password is required");
+        }
+
+        if (error.code === "auth/missing-email") {
+          toast.error("emp");
+        }
       });
   };
 
