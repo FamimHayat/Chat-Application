@@ -5,6 +5,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   updateProfile,
+  sendEmailVerification
 } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -23,7 +24,9 @@ const SignUp = () => {
           displayName: userData.fullName,
           photoURL: "https://example.com/jane-q-user/profile.jpg",
         })
-        .then(() => {
+          .then(() => {
+          console.log(userData);
+          
             toast.success("registration successful, please verify your email account ");
             
           })
