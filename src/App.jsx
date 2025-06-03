@@ -4,8 +4,7 @@ import Layout from './componenets/layout/Index'
 import Home from './pages/Home'
 import SignIn from './componenets/SignIn'
 import SignUp from './componenets/SignUp'
-import ChatList from './componenets/ChatList'
-import ChatBox from './componenets/ChatBox'
+
 import Error404 from './pages/Error404'
 
 
