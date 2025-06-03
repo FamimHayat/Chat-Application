@@ -1,20 +1,41 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router"
+import { Link } from "react-router";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { ToastContainer, toast } from "react-toastify";
 
 const SignUp = () => {
-
   const [userData, setUserData] = useState({
-    fullName:"",
-    email:"",
-    password:""
-  })
-  console.log(userData);
-  
+    fullName: "",
+    email: "",
+    password: "",
+  });
+  const auth = getAuth();
+
+  const handleSignUp = () => {
+    createUserWithEmailAndPassword(auth, userData.email, userData.password)
+      .then((userCredential) => {})
+      .catch((error) => {
+     
+        
+        toast.error(error.code);
+      });
+  };
 
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <section className="h-dvh bg-primary flex justify-center items-center ">
         <div className=" relative py-3 bg-secondColor sm:max-w-xl sm:mx-auto sm:scale-[0.85] scale-[.70]">
           <div className="relative signIn-shadow px-4 py-10 bg-primary border-6 shadow-2xl border-primary outline-4 outline-brand mx-8 md:mx-0  rounded-3xl sm:p-10 ">
@@ -30,26 +51,36 @@ const SignUp = () => {
                 </div>
               </div>
               <div className=" my-10  underline flex flex-col  gap-5">
-             
-                  <input
-                    type="text"
-                    placeholder="full name"
-                    className=" placeholder:text-stone-300  text-[20px]  p-3 pl-5 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
-                    onChange={(e)=> setUserData((prev)=> ({...prev, fullName: e.target.value}))}
-                    />
-               
+                <input
+                  type="text"
+                  placeholder="full name"
+                  className=" placeholder:text-stone-300  text-[20px]  p-3 pl-5 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
+                  onChange={(e) =>
+                    setUserData((prev) => ({
+                      ...prev,
+                      fullName: e.target.value,
+                    }))
+                  }
+                />
 
                 <input
                   type="email"
                   placeholder="email"
                   className=" placeholder:text-stone-300  text-[20px]  p-3 pl-5 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
-                  onChange={(e)=> setUserData((prev)=> ({...prev, email: e.target.value}))}
-                  />
+                  onChange={(e) =>
+                    setUserData((prev) => ({ ...prev, email: e.target.value }))
+                  }
+                />
                 <input
                   type="password"
                   placeholder="password"
                   className="placeholder:text-stone-300 text-[20px]  p-3 pl-5 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
-                  onChange={(e)=> setUserData((prev)=> ({...prev, password: e.target.value}))}
+                  onChange={(e) =>
+                    setUserData((prev) => ({
+                      ...prev,
+                      password: e.target.value,
+                    }))
+                  }
                 />
               </div>
               <div className="text-right mb-4">
@@ -74,6 +105,7 @@ const SignUp = () => {
                 <button
                   className="py-2 px-4 cursor-pointer bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                   type="submit"
+                  onClick={handleSignUp}
                 >
                   Sign Up
                 </button>
