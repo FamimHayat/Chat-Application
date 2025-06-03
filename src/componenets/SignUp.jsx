@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router"
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 const SignUp = () => {
+
+  const [userData, setUserData] = useState({
+    fullName:"",
+    email:"",
+    password:""
+  })
+  console.log(userData);
+  
+
   return (
     <>
       <section className="h-dvh bg-primary flex justify-center items-center ">
@@ -20,28 +30,26 @@ const SignUp = () => {
                 </div>
               </div>
               <div className=" my-10  underline flex flex-col  gap-5">
-                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+             
                   <input
                     type="text"
-                    placeholder="first name"
+                    placeholder="full name"
                     className=" placeholder:text-stone-300  text-[20px]  p-3 pl-5 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
-                  />
-                  <input
-                    type="text"
-                    placeholder="last name"
-                    className=" placeholder:text-stone-300  text-[20px]  p-3 pl-5 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
-                  />
-                </div>
+                    onChange={(e)=> setUserData((prev)=> ({...prev, fullName: e.target.value}))}
+                    />
+               
 
                 <input
                   type="email"
                   placeholder="email"
                   className=" placeholder:text-stone-300  text-[20px]  p-3 pl-5 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
-                />
+                  onChange={(e)=> setUserData((prev)=> ({...prev, email: e.target.value}))}
+                  />
                 <input
                   type="password"
                   placeholder="password"
                   className="placeholder:text-stone-300 text-[20px]  p-3 pl-5 text-white rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
+                  onChange={(e)=> setUserData((prev)=> ({...prev, password: e.target.value}))}
                 />
               </div>
               <div className="text-right mb-4">
