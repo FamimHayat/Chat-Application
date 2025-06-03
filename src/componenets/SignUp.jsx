@@ -32,7 +32,9 @@ const SignUp = () => {
               toast.success(
                 "registration successful, please verify your email account "
               );
-              navigate(/"")
+             setTimeout(() => {
+              navigate("/SignIn");
+             }, 2000);
             });
           })
           .catch((error) => {});
