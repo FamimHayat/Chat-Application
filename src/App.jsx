@@ -6,6 +6,7 @@ import SignIn from './componenets/SignIn'
 import SignUp from './componenets/SignUp'
 import ChatList from './componenets/ChatList'
 import ChatBox from './componenets/ChatBox'
+import Error404 from './pages/Error404'
 
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
             <Route index element={<Home />}/>
           </Route>
           <Route path="/SignIn" element={<SignIn />}/>
-          <Route path="/SignUp" element={<SignUp />}/>
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="*" element={<Error404 />} />
+          
         </Routes>
       </BrowserRouter>
     </>
