@@ -86,23 +86,6 @@ const Nav = () => {
           </li>
         </ul>
 
-        {/* Sign-in / Sign-out Links */}
-        <div className="flex justify-center mb-20 gap-2 px-5 py-2 mt-6 text-brand xl:mb-0">
-          <Link
-            to="/SignIn"
-            className="text-[18px] transition-all hover:text-stone-50 hover:underline"
-          >
-            sign-in
-          </Link>
-          /
-          <Link
-            to="/SignOut"
-            className="text-[18px] transition-all hover:text-stone-50 hover:underline"
-          >
-            sign-out
-          </Link>
-        </div>
-
         {/* User Info */}
         <div className="flex justify-center mt-auto mb-10 px-2 pb-6 gap-2 items-center xl:mb-0 xl:border-0">
           <div className="w-16 overflow-hidden rounded-full">
@@ -111,12 +94,12 @@ const Nav = () => {
           <div>
             <h3 className="text-[22px] text-brand">famim yash</h3>
             <div className="flex gap-5 items-center">
-              <Link to="/myProfile">
+              <Link to="/UserProfile">
                 <p className="text-[16px] text-brand hover:text-base hover:underline">
                   edit profile
                 </p>
               </Link>
-              <Link to="/myProfile">
+              <Link to="/UserProfile">
                 <CiSettings className="text-[20px] text-brand" />
               </Link>
             </div>
