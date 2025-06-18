@@ -2,62 +2,119 @@ import React from "react";
 
 const UserProfile = () => {
   return (
-    <>
-      <section className="flex items-center justify-center">
-        <a
-          href="#"
-          className="group relative flex h-[321px] w-[220px] flex-col items-center justify-center overflow-hidden rounded-tr-[10px] bg-white text-[#4C5656] shadow-[0_14px_26px_rgba(0,0,0,0.04)] transition-all duration-300 ease-out hover:translate-y-[-5px] hover:scale-[1.005] hover:shadow-[0_24px_36px_rgba(0,0,0,0.11),0_24px_46px_rgba(220,233,255,0.48)] active:scale-[1] active:shadow-[0_15px_24px_rgba(0,0,0,0.11),0_15px_24px_rgba(220,233,255,0.48)]"
-        >
-          <div className="absolute top-[70px] left-[50px] h-[118px] w-[118px] rounded-full bg-[#DCE9FF] transition-transform duration-300 ease-out group-hover:scale-[4]" />
+    <div className="w-full flex justify-center bg-secondary ">
+      <div className="w-[300px] sm:w-[350px] h-fit py-15 my-auto rounded-lg overflow-hidden z-[100] bg-primary  signIn-shadow relative cursor-pointer snap-start shrink-0 bg- flex flex-col items-center justify-center gap-3 transition-all duration-300 group">
+        {/* Avatar */}
+        <div className="w-full pt-5 flex flex-col items-center justify-center gap-1">
+          <div className="relative w-full flex items-center justify-center">
+            {/* Top and bottom border lines on hover */}
+            <div className="absolute top-4 w-full h-[6px] bg-text transition-all duration-300 delay-300 group-hover:w-[1%] group-hover:delay-0" />
+            <div className="absolute bottom-4 w-full h-[6px] bg-text transition-all duration-300 delay-300 group-hover:w-[1%] group-hover:delay-0" />
 
-          <div className="relative z-10 flex h-[131px] w-[131px] items-center justify-center rounded-full border-4 border-[#DCE9FF] bg-white transition-all duration-300 ease-out group-hover:border-[#f1f7ff] group-hover:bg-[#DCE9FF]">
-            <div className="absolute h-[118px] w-[118px] rounded-full bg-[#DCE9FF] transition-opacity duration-300 ease-out group-hover:bg-[#f1f7ff]" />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="1855 26 66 77"
-              height="77px"
-              width="66px"
-              className="z-10"
-            >
-              <desc>Created with Sketch.</desc>
-              <g
-                transform="translate(1855.000000, 26.000000)"
-                fillRule="evenodd"
-                fill="none"
-                strokeWidth={1}
-                stroke="none"
-                id="Page-1"
-              >
-                <path
-                  fill="#AFCEFF"
-                  id="Fill-8"
-                  d="M4.28872448,42.7464904 C4.28872448,39.3309774 5.4159227,33.7621426 6.40576697,30.4912557 C10.5920767,32.1098991 14.3021264,35.1207513 18.69596,35.1207513 C30.993618,35.1207513 42.5761396,28.7162991 49.9992251,17.9014817 C56.8027248,23.8881252 60.8188351,33.0463165 60.8188351,42.7464904 C60.8188351,60.817447 47.6104607,76.6693426 32.5537798,76.6693426 C17.4970989,76.6693426 4.28872448,60.817447 4.28872448,42.7464904"
-                />
-                <path
-                  fill="#3B6CB7"
-                  id="Fill-10"
-                  d="M64.3368879,31.1832696 L62.8424171,46.6027478 L60.6432609,46.7824348 L59.8340669,34.6791304 L47.6573402,25.3339478 C44.2906753,34.068487 34.3459503,40.2903304 24.4684093,40.2903304 C17.7559812,40.2903304 10.046244,37.4168 5.80469412,32.8004522 L5.80469412,34.6791304 L5.80469412,46.6027478 L4.28932167,46.6027478 L1.30187314,27.8802435 C1.30187314,20.9790957 3.52342407,15.5432 7.27229127,11.3578087 C13.132229,4.79558261 21.8124018,0.0492173913 30.5672235,0.342852174 C37.4603019,0.569286957 42.6678084,2.72991304 50.8299179,0.342852174 C51.4629405,1.44434783 51.8615656,3.00455652 51.5868577,5.22507826 C51.4629405,6.88316522 51.2106273,7.52302609 50.8299179,8.45067826 C58.685967,14.1977391 64.3368879,20.7073739 64.3368879,31.1832696"
-                />
-                <path
-                  fill="#568ADC"
-                  id="Fill-13"
-                  d="M58.9405197,54.5582052 C62.0742801,54.8270052 65.3603242,52.60064 65.6350321,49.5386574 C65.772386,48.009127 65.2617876,46.5570226 64.3182257,45.4584487 C63.3761567,44.3613357 62.0205329,43.6162922 60.4529062,43.4818922 L58.9405197,54.5582052 Z"
-                />
-                <path
-                  fill="#568ADC"
-                  id="Fill-15"
-                  d="M6.32350389,54.675367 C3.18227865,54.8492104 0.484467804,52.4957496 0.306803449,49.4264626 C0.217224782,47.8925496 0.775598471,46.4579757 1.75200594,45.3886191 C2.7284134,44.3192626 4.10792487,43.6165843 5.67853749,43.530393 L6.32350389,54.675367 Z"
-                />
-              </g>
-            </svg>
+            {/* Avatar Circle */}
+            <div className="relative z-10 h-[80px] w-[80px] rounded-full border-2 border-base hover:border-[#58b0e0] transition-all overflow-hidden">
+              <img
+                src="/my-image.jpg"
+                alt="User"
+                className="h-full w-full object-cover z-20"
+              />
+            </div>
+
+            {/* Hover effect circle behind image */}
+            <div className="absolute bg-base border-4 border-primary z-0 w-[60%] h-[60%] rounded-full transition-all duration-700 delay-700 group-hover:w-[1%] group-hover:h-[1%] group-hover:delay-0" />
           </div>
-          <p className="mt-[30px] text-[17px] text-inherit transition-colors duration-300 ease-out group-hover:text-[#4C5656] z-10">
-            Human Resources
+        </div>
+
+        {/* Name & Title */}
+        <div className="text-center leading-4">
+          <p className="text-xl font-headerFont  text-text">
+            ANNA WILSON
           </p>
-        </a>
-      </section>
-    </>
+          <p className="text-sm font-regularFont font-semibold text-text">DEVELOPER</p>
+        </div>
+
+        {/* Contact Info */}
+        <div className="w-full flex justify-center">
+          <ul className="flex flex-col items-start gap-2 pb-3 text-xs font-semibold text-[#434955] border-b border-dotted border-stone-700 *:inline-flex *:gap-2 *:items-center *:border-b *:border-dotted *:border-stone-700 last:*:border-b-0">
+            {[
+              {
+                icon: (
+                  <svg
+                    className="fill-stone-700 group-hover:fill-[#58b0e0]"
+                    viewBox="0 0 24 24"
+                    height={15}
+                    width={15}
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path d="M19.23 15.26l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52C8.63 4.41 7.78 3.65 6.76 3.65H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73a1.99 1.99 0 0 0-1.76-1.98z" />
+                  </svg>
+                ),
+                text: "+123-458-784",
+              },
+              {
+                icon: (
+                  <svg
+                    className="fill-stone-700 group-hover:fill-[#58b0e0]"
+                    viewBox="0 0 32 32"
+                    height={15}
+                    width={15}
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path d="M16,14.81,28.78,6.6A3,3,0,0,0,27,6H5a3,3,0,0,0-1.78.6Z" />
+                    <path d="M16.54,16.84l-.17.08a1,1,0,0,1-.37,0l-.17-.08L2.1,8.26A3,3,0,0,0,2,9V23a3,3,0,0,0,3,3H27a3,3,0,0,0,3-3V9a3,3,0,0,0-.1-.74Z" />
+                  </svg>
+                ),
+                text: "smkys@gmail.com",
+              },
+              {
+                icon: (
+                  <svg
+                    className="fill-stone-700 group-hover:fill-[#58b0e0]"
+                    viewBox="0 0 24 24"
+                    height={15}
+                    width={15}
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path d="M22 12A10 10 0 1 0 12 2a10 10 0 0 0 10 10zm-2.07-1H17a12.91 12.91 0 0 0-2.33-6.54A8 8 0 0 1 19.93 11zM9.08 13H15a11.44 11.44 0 0 1-3 6.61A11 11 0 0 1 9.08 13z" />
+                  </svg>
+                ),
+                text: "smkydevelopr.com",
+              },
+              {
+                icon: (
+                  <svg
+                    className="fill-stone-700 group-hover:fill-[#58b0e0]"
+                    viewBox="0 0 16 16"
+                    height={15}
+                    width={15}
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path d="M8 0C5.2 0 3 2.2 3 5s4 11 5 11 5-8.2 5-11-2.2-5-5-5zm0 8C6.3 8 5 6.7 5 5s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z" />
+                  </svg>
+                ),
+                text: "456 Anytown, Near Anywhere, ST 47523",
+              },
+            ].map((item, i) => (
+              <li key={i}>
+                {item.icon}
+                <p>{item.text}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Bottom hover bar */}
+        <hr className="w-full h-3 bg-base transition-all duration-300 group-hover:h-5" />
+      </div>
+    </div>
   );
 };
 
 export default UserProfile;
+
+// UserProfile;
