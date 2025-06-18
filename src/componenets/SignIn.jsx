@@ -1,8 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FcGoogle } from 'react-icons/fc'
 import { Link } from 'react-router'
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const SignIn = () => {
+  const auth = getAuth();
+   const [userData, setUserData] = useState({
+      
+      email: "",
+      password: "",
+   });
+  
+  const handleSignIn = () => {
+    console.log(userData);
+
+
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+    
+  }
     return (
       <>
         <section className="h-dvh bg-primary flex justify-center items-center ">
@@ -24,11 +49,23 @@ const SignIn = () => {
                     type="text"
                     placeholder="user name"
                     className="placeholder:text-white text-[20px]  p-3 text-text rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
+                    onChange={(e) =>
+                      setUserData((prev) => ({
+                        ...prev,
+                        email: e.target.value,
+                      }))
+                    }
                   />
                   <input
                     type="password"
                     placeholder="password"
                     className="placeholder:text-white text-[20px]  p-3 text-text rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
+                    onChange={(e) =>
+                      setUserData((prev) => ({
+                        ...prev,
+                        password: e.target.value,  
+                      }))
+                    }
                   />
                 </div>
                 <div className="text-right mb-4">
@@ -51,6 +88,7 @@ const SignIn = () => {
                 </div>
                 <div className="mt-5">
                   <button
+                    onClick={handleSignIn}
                     className="py-2 px-4 bg-blue-600 cursor-pointer hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                     type="submit"
                   >
