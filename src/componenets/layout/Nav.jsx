@@ -5,13 +5,19 @@ import { LuMessageCircleCode } from "react-icons/lu";
 import { SlSettings } from "react-icons/sl";
 import { Link } from "react-router";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi";
+import { useDispatch } from "react-redux"
+import { signedUser } from "../../redux-store/slices/authSlice"
 
 
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(true);
- 
 
+  const dispatch = useDispatch()
+ 
+  const handleSignOut = () => {
+    dispatch(signedUser(null))
+  }
  
 
   return (
@@ -133,7 +139,7 @@ const Nav = () => {
               </Link>
             </div>
           </div>
-          <button  className="w-full py-3 my-3 bg-red-500 cursor-pointer rounded-2xl text-white hover:bg-red-600  "> sign out</button>
+          <button onClick={handleSignOut} className="w-full py-3 my-3 bg-red-500 cursor-pointer rounded-2xl text-white hover:bg-red-600  "> sign out</button>
         </div>
       </div>
     </nav>

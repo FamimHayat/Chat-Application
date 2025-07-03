@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router";
+import { Link, Navigate, useNavigate } from "react-router";
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -8,17 +8,23 @@ import {
   sendEmailVerification,
 } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
+import { useSelector } from "react-redux"
 
 const SignUp = () => {
   const navigate = useNavigate();
+  const reduxData = useSelector((state) => state.userInfo.userData);
+ 
 
+  
+  
+  
   const [userData, setUserData] = useState({
     fullName: "",
     email: "",
     password: "",
   });
   const auth = getAuth();
-
+  
   const handleSignUp = () => {
     createUserWithEmailAndPassword(auth, userData.email, userData.password)
       .then((userCredential) => {
@@ -27,7 +33,7 @@ const SignUp = () => {
           photoURL: "https://example.com/jane-q-user/profile.jpg",
         })
           .then(() => {
-            console.log(userData);
+           
             sendEmailVerification(auth.currentUser).then(() => {
               toast.success(
                 "registration successful, please verify your email account "
@@ -57,6 +63,9 @@ const SignUp = () => {
       });
   };
 
+if (reduxData) {
+    return <Navigate to="/" />;
+  }
   return (
     <>
       <ToastContainer

@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Users from "./home/Users";
 import { FaSearch } from "react-icons/fa";
+import { PiArrowBendDoubleUpLeft } from "react-icons/pi"
 
 const ChatList = () => {
+  const [addList, setAddList] = useState(false);
+
   return (
     <>
-      <section className="h-dvh md:w-4xl flex flex-col  bg-primary  border-r-2 border-r-brand rounded-xl">
+      <div className="absolute z-20  bg-[#000000b0] w-full h-dvh">
+        <div className="absolute top-50 left-150  bg-primary  w-100  h-150 p-3">
+          <div className="flex gap-8 items-center border-b-2 pb-3  border-text ">
+            <button
+              onClick={() => setAddList(false)}
+              className="text-4xl p-1 cursor-pointer border-2 border-primary outline-2 outline-base rounded-full bg-brand hover:bg-text  text-primary "
+            >
+              <PiArrowBendDoubleUpLeft />
+            </button>
+            <h2 className="text-4xl font-headerFont  text-brand">users</h2>
+          </div>
+        </div>
+      </div>
+      <section className=" h-dvh md:w-4xl flex flex-col  bg-primary  border-r-2 border-r-brand rounded-xl">
         <div className="flex items-center w-full border-b-2 border-b-brand rounded-2xl">
           <div className="relative flex  w-full   p-3 gap-3">
             <input
@@ -18,7 +34,10 @@ const ChatList = () => {
             </div>
           </div>
           <div className="p-2">
-            <button className="text-2xl font-semibold py-2 px-4 border-2  mr-3 cursor-pointer  text-brand hover:text-primary hover:bg-text">
+            <button
+              onClick={() => setAddList(true)}
+              className="text-2xl font-semibold py-2 px-4 border-2  mr-3 cursor-pointer  text-brand hover:text-primary hover:bg-text"
+            >
               add
             </button>
           </div>

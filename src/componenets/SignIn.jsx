@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router";
+import { Link, Navigate, useNavigate } from "react-router";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux"
+import { signedUser } from "../redux-store/slices/authSlice"
 
 const SignIn = () => {
   const auth = getAuth();
@@ -10,14 +12,29 @@ const SignIn = () => {
     email: "",
     password: "",
   });
+  const reduxData = useSelector((state) => state.userInfo.userData);
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const handleSignIn = () => {
     console.log(userData);
-
-    signInWithEmailAndPassword(auth)
-      .then((res) => {
+    signInWithEmailAndPassword(auth, userData.email, userData.password)
+      .then((userCredential) => {
        
-        
+        console.log(userCredential.user);
+
+        if (!userCredential.user.emailVerified) {
+          toast.error("verify your email before log in  ");
+        } else {
+     
+          
+          
+          toast.success("signed in successfully")
+          dispatch(signedUser(userCredential.user))
+          setTimeout(() => {
+            navigate("/")
+          }, 1500);
+        }
       
       })
       .catch((error) => {
@@ -27,10 +44,12 @@ const SignIn = () => {
         // if (error.code === "auth/invalid-email") {
         //   toast.error("empty input fields");
         // }
-
-
       });
   };
+
+  if (reduxData) {
+    return <Navigate to="/" />;
+  }
   return (
     <>
       <ToastContainer
