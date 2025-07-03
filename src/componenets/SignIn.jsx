@@ -17,7 +17,7 @@ const SignIn = () => {
     signInWithEmailAndPassword(auth)
       .then((res) => {
        
-        const user = res.user;
+        
       
       })
       .catch((error) => {

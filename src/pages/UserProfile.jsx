@@ -1,4 +1,7 @@
 import React from "react";
+import { CiSaveUp1 } from "react-icons/ci"
+import { FaPen, FaSave } from "react-icons/fa"
+import { FaSquarePollVertical } from "react-icons/fa6"
 
 const UserProfile = () => {
   return (
@@ -27,85 +30,28 @@ const UserProfile = () => {
 
         {/* Name & Title */}
         <div className="text-center leading-4">
-          <p className="text-xl font-headerFont  text-text">
-            ANNA WILSON
+          <div className="flex gap-7">
+            <p className="text-3xl font-headerFont my-4 text-text">
+              ANNA WILSON
+            </p>
+            <button>
+              <FaPen className="text-3xl text-white p-1 cursor-pointer hover:bg-blue-600  active:bg-transparent" />
+            </button>
+          </div>
+          <p className="text-sm font-regularFont font-semibold text-text">
+            DEVELOPER
           </p>
-          <p className="text-sm font-regularFont font-semibold text-text">DEVELOPER</p>
         </div>
 
-        {/* Contact Info */}
-        <div className="w-full flex justify-center">
-          <ul className="flex flex-col items-start gap-2 pb-3 text-xs font-semibold text-[#434955] border-b border-dotted border-stone-700 *:inline-flex *:gap-2 *:items-center *:border-b *:border-dotted *:border-stone-700 last:*:border-b-0">
-            {[
-              {
-                icon: (
-                  <svg
-                    className="fill-stone-700 group-hover:fill-[#58b0e0]"
-                    viewBox="0 0 24 24"
-                    height={15}
-                    width={15}
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path d="M0 0h24v24H0V0z" fill="none" />
-                    <path d="M19.23 15.26l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52C8.63 4.41 7.78 3.65 6.76 3.65H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73a1.99 1.99 0 0 0-1.76-1.98z" />
-                  </svg>
-                ),
-                text: "+123-458-784",
-              },
-              {
-                icon: (
-                  <svg
-                    className="fill-stone-700 group-hover:fill-[#58b0e0]"
-                    viewBox="0 0 32 32"
-                    height={15}
-                    width={15}
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path d="M16,14.81,28.78,6.6A3,3,0,0,0,27,6H5a3,3,0,0,0-1.78.6Z" />
-                    <path d="M16.54,16.84l-.17.08a1,1,0,0,1-.37,0l-.17-.08L2.1,8.26A3,3,0,0,0,2,9V23a3,3,0,0,0,3,3H27a3,3,0,0,0,3-3V9a3,3,0,0,0-.1-.74Z" />
-                  </svg>
-                ),
-                text: "smkys@gmail.com",
-              },
-              {
-                icon: (
-                  <svg
-                    className="fill-stone-700 group-hover:fill-[#58b0e0]"
-                    viewBox="0 0 24 24"
-                    height={15}
-                    width={15}
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path d="M22 12A10 10 0 1 0 12 2a10 10 0 0 0 10 10zm-2.07-1H17a12.91 12.91 0 0 0-2.33-6.54A8 8 0 0 1 19.93 11zM9.08 13H15a11.44 11.44 0 0 1-3 6.61A11 11 0 0 1 9.08 13z" />
-                  </svg>
-                ),
-                text: "smkydevelopr.com",
-              },
-              {
-                icon: (
-                  <svg
-                    className="fill-stone-700 group-hover:fill-[#58b0e0]"
-                    viewBox="0 0 16 16"
-                    height={15}
-                    width={15}
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path d="M8 0C5.2 0 3 2.2 3 5s4 11 5 11 5-8.2 5-11-2.2-5-5-5zm0 8C6.3 8 5 6.7 5 5s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z" />
-                  </svg>
-                ),
-                text: "456 Anytown, Near Anywhere, ST 47523",
-              },
-            ].map((item, i) => (
-              <li key={i}>
-                {item.icon}
-                <p>{item.text}</p>
-              </li>
-            ))}
-          </ul>
+        <div className="flex gap-2">
+          <input
+            type="text"
+            placeholder="type your massage"
+            className="placeholder:text-[#c6c6c6c9] text-[22px] w-full px-3 py-2 text-text rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
+          />
+          <button className="">
+            <CiSaveUp1 className="text-5xl text-white p-1 cursor-pointer hover:bg-blue-600  active:bg-transparent" />
+          </button>
         </div>
 
         {/* Bottom hover bar */}
