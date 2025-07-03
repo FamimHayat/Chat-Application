@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { ToastContainer } from "react-toastify";
 
 const SignIn = () => {
   const auth = getAuth();
@@ -13,19 +14,37 @@ const SignIn = () => {
   const handleSignIn = () => {
     console.log(userData);
 
-    signInWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth)
       .then((res) => {
-        // Signed in
-        const user = userCredential.user;
-        // ...
+       
+        const user = res.user;
+      
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        console.log(error.code);
+        console.log(error.message);
+
+        // if (error.code === "auth/invalid-email") {
+        //   toast.error("empty input fields");
+        // }
+
+
       });
   };
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <section className="h-dvh bg-primary flex justify-center items-center ">
         <div className=" relative py-3 bg-secondColor sm:max-w-xl sm:mx-auto scale-[.9]">
           <div className="relative signIn-shadow px-4 py-10 bg-primary border-6 shadow-2xl border-primary outline-4 outline-brand mx-8 md:mx-0  rounded-3xl sm:p-10 ">
@@ -42,8 +61,8 @@ const SignIn = () => {
               </div>
               <div className="my-10  underline flex flex-col  gap-5">
                 <input
-                  type="text"
-                  placeholder="user name"
+                  type="email"
+                  placeholder="email address"
                   className="placeholder:text-white text-[20px]  p-3 text-text rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
                   onChange={(e) =>
                     setUserData((prev) => ({
