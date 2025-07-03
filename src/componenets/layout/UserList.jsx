@@ -2,16 +2,22 @@ import React, { useEffect, useState } from "react";
 import { PiArrowBendDoubleUpLeft } from "react-icons/pi";
 import { getDatabase, ref, onValue } from "firebase/database";
 import Users from "../home/Users";
+import { useSelector } from "react-redux"
 
 const UserList = ({ handleClose }) => {
   const db = getDatabase();
   const [userList, setUserList] = useState([]);
+  console.log(userList);
+  
+  const reduxData = useSelector((state) => state.userInfo.userData);
 
   useEffect(() => {
     onValue(ref(db, "usersList/"), (snapshot) => {
       let arr = [];
       snapshot.forEach((item) => {
-        arr.push({ ...item.val(), id: item.key });
+        if (item.key !== reduxData?.uid){
+          arr.push({ ...item.val(), id: item.key });
+        }
       });
       setUserList(arr);
     });
@@ -30,14 +36,16 @@ const UserList = ({ handleClose }) => {
           </button>
           <h2 className="text-4xl font-headerFont text-brand">users</h2>
         </div>
-        <div>
+        <div className="mt-2 h-[calc(52dvh)] overflow-hidden overflow-y-scroll">
           {userList.map((item) => (
             <Users
+              key={item.id}
               userImage={item.profile_picture}
               userName={item.username}
-           
             />
           ))}
+       
+        
         </div>
       </div>
     </div>
