@@ -1,9 +1,11 @@
-import React from "react";
-import { CiSaveUp1 } from "react-icons/ci"
-import { FaPen, FaSave } from "react-icons/fa"
-import { FaSquarePollVertical } from "react-icons/fa6"
+import React, { useState } from "react";
+import { CiSaveUp1 } from "react-icons/ci";
+import { FaPen, FaSave } from "react-icons/fa";
+import { FaSquarePollVertical } from "react-icons/fa6";
 
 const UserProfile = () => {
+  const [edit, setEdit] = useState(false);
+
   return (
     <div className="w-full flex justify-center bg-secondary ">
       <div className="w-[300px] sm:w-[350px] h-fit py-15 my-auto rounded-lg overflow-hidden z-[100] bg-primary  signIn-shadow relative cursor-pointer snap-start shrink-0 bg- flex flex-col items-center justify-center gap-3 transition-all duration-300 group">
@@ -32,28 +34,26 @@ const UserProfile = () => {
         <div className="text-center leading-4">
           <div className="flex gap-7">
             <p className="text-3xl font-headerFont my-4 text-text">
-              ANNA WILSON
+             
             </p>
-            <button>
+            <button onClick={()=> setEdit(true)}>
               <FaPen className="text-3xl text-white p-1 cursor-pointer hover:bg-blue-600  active:bg-transparent" />
             </button>
           </div>
-          <p className="text-sm font-regularFont font-semibold text-text">
-            DEVELOPER
-          </p>
         </div>
 
-        <div className="flex gap-2">
-          <input
-            type="text"
-            placeholder="type your massage"
-            className="placeholder:text-[#c6c6c6c9] text-[22px] w-full px-3 py-2 text-text rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
-          />
-          <button className="">
-            <CiSaveUp1 className="text-5xl text-white p-1 cursor-pointer hover:bg-blue-600  active:bg-transparent" />
-          </button>
-        </div>
-
+        {edit && (
+          <div className="flex gap-2">
+            <input
+              type="text"
+              placeholder="type your massage"
+              className="placeholder:text-[#c6c6c6c9] text-[22px] w-full px-3 py-2 text-text rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
+            />
+            <button onClick={()=> setEdit(false)}>
+              <CiSaveUp1 className="text-5xl text-white p-1 cursor-pointer hover:bg-blue-600  active:bg-transparent" />
+            </button>
+          </div>
+        )}
         {/* Bottom hover bar */}
         <hr className="w-full h-3 bg-base transition-all duration-300 group-hover:h-5" />
       </div>
