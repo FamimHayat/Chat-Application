@@ -8,39 +8,48 @@ import {
   sendEmailVerification,
 } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
+import { getDatabase, ref, set } from "firebase/database";
 
 const SignUp = () => {
   const navigate = useNavigate();
   const reduxData = useSelector((state) => state.userInfo.userData);
- 
 
+  console.log(reduxData);
   
-  
-  
+
+  const db = getDatabase();
+
   const [userData, setUserData] = useState({
     fullName: "",
     email: "",
     password: "",
   });
   const auth = getAuth();
-  
+
   const handleSignUp = () => {
     createUserWithEmailAndPassword(auth, userData.email, userData.password)
       .then((userCredential) => {
         updateProfile(auth.currentUser, {
           displayName: userData.fullName,
-          photoURL: "https://example.com/jane-q-user/profile.jpg",
+          photoURL: "https://i.postimg.cc/d3H83wgM/my-image.jpg",
         })
           .then(() => {
-           
             sendEmailVerification(auth.currentUser).then(() => {
+              
+              
               toast.success(
                 "registration successful, please verify your email account "
               );
               setTimeout(() => {
                 navigate("/SignIn");
               }, 2000);
+
+              set(ref(db, "usersList/" + auth.currentUser.uid), {
+                username: auth.currentUser.displayName,
+                email: auth.currentUser.email,
+                profile_picture: auth.currentUser.photoURL,
+              });
             });
           })
           .catch((error) => {});
@@ -63,7 +72,7 @@ const SignUp = () => {
       });
   };
 
-if (reduxData) {
+  if (reduxData) {
     return <Navigate to="/" />;
   }
   return (

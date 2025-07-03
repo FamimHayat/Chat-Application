@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { CiSaveUp1 } from "react-icons/ci";
 import { FaPen, FaSave } from "react-icons/fa";
 import { FaSquarePollVertical } from "react-icons/fa6";
+import { useSelector } from "react-redux"
 
 const UserProfile = () => {
   const [edit, setEdit] = useState(false);
+  const reduxData = useSelector((state) => state.userInfo.userData);
 
   return (
     <div className="w-full flex justify-center bg-secondary ">
@@ -33,10 +35,8 @@ const UserProfile = () => {
         {/* Name & Title */}
         <div className="text-center leading-4">
           <div className="flex gap-7">
-            <p className="text-3xl font-headerFont my-4 text-text">
-             
-            </p>
-            <button onClick={()=> setEdit(true)}>
+            <p className="text-3xl font-headerFont my-4 text-text">{reduxData.displayName}</p>
+            <button onClick={() => setEdit(true)}>
               <FaPen className="text-3xl text-white p-1 cursor-pointer hover:bg-blue-600  active:bg-transparent" />
             </button>
           </div>
@@ -49,7 +49,7 @@ const UserProfile = () => {
               placeholder="type your massage"
               className="placeholder:text-[#c6c6c6c9] text-[22px] w-full px-3 py-2 text-text rounded-full bg-primaryColor outline-0 input-shadow border-3 border-secondary focus:outline-3 focus:outline-brand "
             />
-            <button onClick={()=> setEdit(false)}>
+            <button onClick={() => setEdit(false)}>
               <CiSaveUp1 className="text-5xl text-white p-1 cursor-pointer hover:bg-blue-600  active:bg-transparent" />
             </button>
           </div>

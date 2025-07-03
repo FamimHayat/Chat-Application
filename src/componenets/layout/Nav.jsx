@@ -5,13 +5,16 @@ import { LuMessageCircleCode } from "react-icons/lu";
 import { SlSettings } from "react-icons/sl";
 import { Link } from "react-router";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi";
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { signedUser } from "../../redux-store/slices/authSlice"
 
 
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(true);
+  const reduxData = useSelector((state) => state.userInfo.userData);
+  console.log(reduxData);
+  
 
   const dispatch = useDispatch()
  
@@ -46,13 +49,13 @@ const Nav = () => {
             {/* Profile Section */}
             <div className="flex items-center gap-3">
               <img
-                src="/profile-image.jpg"
+                src={reduxData.photoURL}
                 alt="users-image"
                 className="w-15 h-15 rounded-full p-0.5 border border-gray-300"
               />
               <div className="flex flex-col gap-1">
                 <h2 className="text-[19px] text-white hidden md:block">
-                  user-name
+                  {reduxData.displayName}
                 </h2>
                 <Link
                   to="/userProfile"
@@ -102,19 +105,13 @@ const Nav = () => {
             <LuMessageCircleCode className="text-[25px] text-white " />
           </li>
           <li className="flex justify-between items-center cursor-pointer border-2  px-1 transition-all hover:underline group hover:bg-[#8c8c8c] focus:bg-[#8c8c8c]">
-            <Link
-              to="/"
-              className="py-3 text-white group-hover:text-black"
-            >
+            <Link to="/" className="py-3 text-white group-hover:text-black">
               Groups
             </Link>
             <FaUserGroup className="text-[25px] text-white" />
           </li>
           <li className="flex justify-between items-center cursor-pointer border-2  px-1 transition-all hover:underline group hover:bg-[#8c8c8c] focus:bg-[#8c8c8c]">
-            <Link
-              to="/"
-              className="py-3 text-white group-hover:text-black"
-            >
+            <Link to="/" className="py-3 text-white group-hover:text-black">
               Friends
             </Link>
             <IoIosPeople className="text-[30px] text-white" />
@@ -125,12 +122,15 @@ const Nav = () => {
         <div className="mt-auto">
           <div className="hidden lg:flex  gap-2 mb-5 items-center">
             <img
-              src="/profile-image.jpg"
+              src={reduxData.photoURL}
               alt="users-image"
               className="w-15 h-15 rounded-full p-0.5 border border-gray-300"
             />
             <div className="flex flex-col gap-2">
-              <h2 className="text-[19px] text-white">user-name</h2>
+              <h2 className="text-[19px] text-white">
+                {" "}
+                {reduxData.displayName}
+              </h2>
               <Link to="/myProfile" className="flex gap-3 items-center group">
                 <p className="text-white group-hover:underline group-hover:text-blue-300 cursor-pointer">
                   edit profile
@@ -139,7 +139,13 @@ const Nav = () => {
               </Link>
             </div>
           </div>
-          <button onClick={handleSignOut} className="w-full py-3 my-3 bg-red-500 cursor-pointer rounded-2xl text-white hover:bg-red-600  "> sign out</button>
+          <button
+            onClick={handleSignOut}
+            className="w-full py-3 my-3 bg-red-500 cursor-pointer rounded-2xl text-white hover:bg-red-600  "
+          >
+            {" "}
+            sign out
+          </button>
         </div>
       </div>
     </nav>
