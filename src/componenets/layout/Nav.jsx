@@ -19,7 +19,7 @@ const Nav = () => {
 
   return (
     <nav
-      className="bg-[#202020] border-b-4 xl:h-dvh w-full xl:w-fit border-r-4 border-[#4f4e4e] pr-6"
+      className="bg-[#1e1e1e] border-b-4 xl:h-dvh w-full xl:w-fit border-r-4 border-[#4f4e4e] pr-6"
       aria-label="Main Navigation"
     >
       <div className="flex h-full px-3 flex-col xl:flex-col xl:justify-start pt-5 xl:pt-0">
@@ -27,7 +27,7 @@ const Nav = () => {
         <div className="flex items-center justify-between xl:flex-col xl:items-start">
           {/* Brand Logo */}
           <div className="py-3 text-4xl text-white font-headerFont xl:w-[200px]">
-            royal chat
+            Royal Chat
           </div>
 
           {/* Profile + toggle container */}

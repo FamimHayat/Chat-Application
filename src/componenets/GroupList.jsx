@@ -9,7 +9,7 @@ const ChatList = () => {
       <section className="h-dvh md:w-4xl flex flex-col bg-primary border-r-2 border-r-brand rounded-xl">
         <div className="flex justify-between items-center mt-3">
           <h2 className="ml-4 text-3xl font-headerFont text-brand tracking-wide">
-            chat with friends
+            chat with groups
           </h2>
           <div className="p-2">
             <button className="text-2xl font-semibold py-2 px-4 border-2 mr-3 cursor-pointer text-brand hover:text-primary hover:bg-text focus:bg-text focus:text-primary">
