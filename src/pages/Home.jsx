@@ -1,16 +1,13 @@
-import React from 'react'
-import Chat from './Chat'
-
-
+import React from "react";
+import Chat from "./Chat";
+import Groups from "./GroupPage";
 
 const Home = () => {
   return (
-  
     <>
-      <Chat/>
+      <Chat />
     </>
-   
   );
-}
+};
 
-export default Home
+export default Home;

@@ -2,21 +2,21 @@ import React, { useEffect, useState } from "react";
 import { PiArrowBendDoubleUpLeft } from "react-icons/pi";
 import { getDatabase, ref, onValue } from "firebase/database";
 import Users from "../home/Users";
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
 
 const UserList = ({ handleClose }) => {
   const db = getDatabase();
   const [userList, setUserList] = useState([]);
   console.log(userList);
-  
+
   const reduxData = useSelector((state) => state.userInfo.userData);
 
   useEffect(() => {
     onValue(ref(db, "usersList/"), (snapshot) => {
       let arr = [];
-      snapshot.forEach((item) => {
-        if (item.key !== reduxData?.uid){
-          arr.push({ ...item.val(), id: item.key });
+      snapshot.forEach((items) => {
+        if (items.key !== reduxData?.uid) {
+          arr.push({ ...items.val(), id: items.key });
         }
       });
       setUserList(arr);
@@ -25,7 +25,7 @@ const UserList = ({ handleClose }) => {
 
   return (
     <div className="absolute z-20 bg-[#eae4d5cb] w-full h-dvh">
-      <div className="absolute top-50 left-150 bg-primary w-100 h-150 p-6 border-4 border-base signIn-shadow input-shadow rounded-3xl">
+      <div className="absolute top-5 left-10 xl:top-50 xl:left-150 bg-primary w-100 h-150 p-6 border-4 border-base signIn-shadow input-shadow rounded-3xl">
         <div className="flex gap-8 items-center border-b-2 pb-3 border-text">
           <button
             onClick={handleClose}
@@ -38,14 +38,8 @@ const UserList = ({ handleClose }) => {
         </div>
         <div className="mt-2 h-[calc(52dvh)] overflow-hidden overflow-y-scroll">
           {userList.map((item) => (
-            <Users
-              key={item.id}
-              userImage={item.profile_picture}
-              userName={item.username}
-            />
+            <Users key={item.id} friendData={item} />
           ))}
-       
-        
         </div>
       </div>
     </div>
