@@ -23,14 +23,11 @@ const Nav = () => {
       aria-label="Main Navigation"
     >
       <div className="flex h-full px-3 flex-col xl:flex-col xl:justify-start pt-5 xl:pt-0">
-        {/* Top row: Brand logo and profile side-by-side on small screens */}
         <div className="flex items-center justify-between xl:flex-col xl:items-start">
-          {/* Brand Logo */}
           <div className="py-3 text-4xl text-white font-headerFont xl:w-[200px]">
             Royal Chat
           </div>
 
-          {/* Profile + toggle container */}
           <div className="flex items-center gap-3 pl-5 xl:hidden">
             <div className="flex items-center gap-3">
               <img
@@ -54,7 +51,6 @@ const Nav = () => {
               </div>
             </div>
 
-            {/* Toggle */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label={menuOpen ? "Collapse menu" : "Expand menu"}
@@ -71,7 +67,6 @@ const Nav = () => {
           </div>
         </div>
 
-        {/* Navigation Links */}
         <ul
           className={`
             flex flex-col gap-2 text-[28px] text-black mt-8 mb-4 xl:mt-40 
@@ -80,42 +75,41 @@ const Nav = () => {
             xl:max-h-full xl:flex-col xl:gap-4
           `}
         >
-          <li className="justify-between items-center cursor-pointer border-2 px-1 transition-all hover:underline group hover:bg-[#8c8c8c]">
+          <li className="justify-between items-center cursor-pointer rounded-xl  px-1 transition-all hover:underline group hover:bg-[#00000066]">
             <Link
               to="/"
-              className="w-full py-3 flex text-white group-hover:text-black focus:underline focus:italic"
+              className="w-full py-3 flex text-white group-hover:text-base  border-8 border-[#1e1e1e] outline-2 outline-black focus:outline-brand focus:underline rounded-xl focus:bg-primary group focus:text-brand my-1"
             >
-              <div className="flex justify-between items-center w-full">
+              <div className="flex justify-around items-center w-full ">
                 Chat List
-                <LuMessageCircleCode className="text-[25px] text-white" />
+                <LuMessageCircleCode className="text-[25px] text-white group-focus:text-brand" />
               </div>
             </Link>
           </li>
-          <li className="justify-between items-center cursor-pointer border-2 px-1 transition-all hover:underline group hover:bg-[#8c8c8c] focus:bg-[#8c8c8c]">
+          <li className="justify-between items-center cursor-pointer  px-1 transition-all hover:underline group hover:bg-[#00000066] focus:bg-[#8c8c8c]">
             <Link
               to="/groups"
-              className="w-full py-3 text-white group-hover:text-black"
+              className="w-full py-3 flex text-white group-hover:text-base  border-8 border-[#1e1e1e] outline-2 outline-black focus:outline-brand focus:underline rounded-xl focus:bg-primary group focus:text-brand my-1"
             >
-              <div className="flex justify-between items-center w-full">
+              <div className="flex justify-around items-center w-full">
                 Groups
-                <FaUserGroup className="text-[25px] text-white" />
+                <FaUserGroup className="text-[25px] text-white group-focus:text-brand" />
               </div>
             </Link>
           </li>
-          <li className="flex justify-between items-center cursor-pointer border-2 px-1 transition-all hover:underline group hover:bg-[#8c8c8c] focus:bg-[#8c8c8c]">
+          <li className="flex justify-between items-center cursor-pointer    px-1 transition-all hover:underline group hover:bg-[#00000066] focus:bg-[#8c8c8c]">
             <Link
               to="/"
-              className="w-full py-3 text-white group-hover:text-black"
+              className="w-full py-3 flex text-white group-hover:text-base  border-8 border-[#1e1e1e] outline-2 outline-black focus:outline-brand focus:underline rounded-xl focus:bg-primary group focus:text-brand my-1"
             >
-              <div className="flex justify-between items-center w-full">
+              <div className="flex justify-around items-center w-full">
                 Friends
-                <IoIosPeople className="text-[30px] text-white" />
+                <IoIosPeople className="text-[30px] text-white group-focus:text-brand" />
               </div>
             </Link>
           </li>
         </ul>
 
-        {/* Profile section below menu on xl and above */}
         <div className="mt-auto">
           <div className="hidden xl:flex gap-2 mb-5 items-center">
             <img
@@ -137,7 +131,7 @@ const Nav = () => {
           </div>
           <button
             onClick={handleSignOut}
-            className="w-full py-3 my-3 bg-red-500 cursor-pointer rounded-2xl text-white hover:bg-red-600"
+            className="w-full py-3 my-3 text-xl bg-red-500 cursor-pointer rounded-2xl transition-all text-white hover:bg-red-600"
           >
             sign out
           </button>
